@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Rahul Juandri - Siswa SMK Karya Guna Bhakti 2</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #1e1e1e, #333);
+            color: #e0e0e0;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://source.unsplash.com/1600x900/?technology,code') no-repeat center center;
+            background-size: cover;
+            filter: blur(8px);
+            z-index: -1;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3.5em;
+            letter-spacing: 2px;
+            transition: color 0.3s ease;
+        }
+        header h1:hover {
+            color: #ff9800;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .profile-img {
+    width: 150px; /* Sesuaikan ukuran jika terlalu besar */
+    height: 150px; /* Sesuaikan ukuran jika terlalu besar */
+    border-radius: 50%;
+    border: 6px solid #1e1e1e;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px; /* Kurangi jarak margin atas */
+    margin-bottom: 20px;
+}
+
+        .profile-img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+        }
+        .about {
+            background: linear-gradient(145deg, #1e1e1e, #2c2c2c);
+            padding: 40px;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-out;
+        }
+        .about h2 {
+            color: #ff9800;
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .about h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #ff9800;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            border-radius: 2px;
+        }
+        .about h3 {
+            color: #e0e0e0;
+            font-size: 1.8em;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        .about p {
+            margin: 10px 0;
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+        .contact {
+            background: linear-gradient(145deg, #1e1e1e, #333);
+            color: #e0e0e0;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 20px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-out 0.5s;
+        }
+        .contact h3 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+        }
+        .contact a {
+            color: #ff9800;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+        .contact a:hover {
+            color: #ffc107;
+            text-shadow: 0 0 10px #ffc107;
+        }
+        footer {
+            background: #1e1e1e;
+            color: #e0e0e0;
+            padding: 15px;
+            text-align: center;
+            border-top: 2px solid #333;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Media Query untuk perangkat dengan lebar layar hingga 768px */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1.2em;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .about, .contact {
+        padding: 20px;
+        margin: 10px 0;
+    }
+
+    .about h2 {
+        font-size: 2em;
+    }
+
+    .about h3 {
+        font-size: 1.6em;
+    }
+
+    .about p {
+        font-size: 1em;
+    }
+
+    .contact h3 {
+        font-size: 1.8em;
+    }
+
+    .contact a {
+        font-size: 1em;
+    }
+}
+
+/* Media Query untuk perangkat dengan lebar layar hingga 480px */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .about, .contact {
+        padding: 15px;
+        margin: 5px 0;
+    }
+
+    .about h2 {
+        font-size: 1.6em;
+    }
+
+    .about h3 {
+        font-size: 1.4em;
+    }
+
+    .about p {
+        font-size: 0.9em;
+    }
+
+    .contact h3 {
+        font-size: 1.6em;
+    }
+
+    .contact a {
+        font-size: 0.9em;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Kevin Rahul Juandri</h1>
+            <p>Siswa SMK Karya Guna Bhakti 2 - Tingkat XI</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <img src="kevin1.jpeg" alt="Foto Profil Kevin Rahul Juandri" class="profile-img">
+        <div class="about">
+            <h2>Tentang Saya</h2>
+            <p>Halo! Saya Kevin Rahul Juandri, seorang siswa di SMK Karya Guna Bhakti 2, saat ini berada di tingkat XI. Minat utama saya adalah dalam pelajaran Informatika. Saya memulai pendidikan saya di SDN Perwira 7, di mana saya pertama kali mengembangkan minat dalam Informatika.</p>
+
+            <h3>Minat dan Kegiatan</h3>
+            <p>Saat ini, saya bersekolah di SMK Karya Guna Bhakti 2, di mana saya sangat tertarik pada Informatika. Saya suka membuat proyek sendiri dan terus berusaha untuk memperdalam pengetahuan saya di bidang ini.</p>
+
+            <h3>Tujuan dan Ambisi</h3>
+            <p>Saya bercita-cita untuk menjadi seorang programmer aktif. Saya percaya bahwa pendidikan dan dedikasi adalah kunci untuk mencapai ambisi saya di bidang Informatika.</p>
+        </div>
+
+        <div class="contact">
+            <h3>Kontak Saya</h3>
+            <p>Jika Anda tertarik untuk berdiskusi lebih lanjut atau ingin terhubung dengan saya, jangan ragu untuk menghubungi saya melalui WhatsApp di <a href="https://wa.me/6287843290571">Nomor WhatsApp</a>.</p>
+        </div>
+    </div>
+
+</body>
+</html>
