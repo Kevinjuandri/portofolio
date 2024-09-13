@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Web dev</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="text-left">
+            <div class="text-content">
+                <div class="text-large">Hi I'm Kevin Rahul Juandri</div>
+                <div class="text-medium">A Student</div>
+                <div class="text-small">
+                    <p>Transformasi Digital dengan Internet of Things (IoT) Di Kevin Housting,</p>
+                    <p>saya menghubungkan dunia melalui teknologi Internet of Things (IoT). Dengan solusi IoT inovatif,</p>
+                    <p>saya membantu bisnis dan individu mengoptimalkan operasional,</p>
+                    <p>meningkatkan efisiensi, dan menciptakan pengalaman yang lebih baik.</p>
+                </div>
+            </div>
+            <div class="contact-me">
+                <span>Contact Me</span>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/kevinjuandri_?igsh=dnhqcm5uaW5nNWt1" target="_blank" class="social-icon instagram">
+                    <img src="ig-removebg-preview.png" alt="Instagram">
+                </a>
+                <a href="https://wa.me/6287843290571" target="_blank" class="social-icon whatsapp">
+                    <img src="OIP-removebg-preview.png" alt="WhatsApp">
+                </a>
+                <a href="http://t.me/kevinjuandri" target="_blank" class="social-icon telegram">
+                    <img src="onelaw-icon-plane-removebg-preview.png" alt="Telegram">
+                </a>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="kevin-removebg-preview.png" alt="Kevin">
+        </div>
+    </div>
+    <div class="text-wrapper">
+        <div class="text-animation">
+            <h1>Kevin Juandri Housting</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="services.html">Service</a></li>
+                <li><a href="portofolio.html">Portofolio</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="guide-container" id="guide">
+        <span class="close-guide" id="close-guide">&times;</span>
+        <h1>Cara mengaktifkan mode dekstop</h1>
+        <div class="step">
+            <h2>Click "Step 1"</h2>
+            <img src="1 tut.jpeg" alt="Open Menu">
+            <p>Click (OK)</p>
+        </div>
+        <div class="step">
+            <h2>Step 2</h2>
+            <img src="2 tut.jpeg" alt="More Tools">
+            <p>Click titik 3 di pojok kanan atas</p>
+        </div>
+        <div class="step">
+            <h2>Step 3</h2>
+            <img src="3 tut.jpeg" alt="Developer Tools">
+            <p>Click situs dekstop</p>
+        </div>
+    </div>
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const guide = document.getElementById('guide');
+        const closeGuide = document.getElementById('close-guide');
+    
+        if (window.innerWidth < 1024) {
+            alert('Untuk tampilan terbaik, silakan lihat situs ini di mode desktop.');
+            guide.style.display = 'block';
+        }
+    
+        closeGuide.addEventListener('click', function() {
+            guide.style.display = 'none';
+        });
+    
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 1024) {
+                guide.style.display = 'none';
+            }
+        });
+    });
+    </script>
+    
+</body>
+</html>
+
+<style>
+    .guide-container {
+    display: none; /* Sembunyikan panduan secara default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 9999;
+    overflow-y: auto; /* Tambahkan ini untuk memungkinkan scrolling vertikal */
+}
+.guide-container img {
+    max-width: 90%; /* Mengatur lebar maksimum gambar */
+    height: auto;   /* Menjaga proporsi gambar */
+    margin: 10px 0;
+}
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black; 
+    color: white; 
+    overflow-x: hidden; 
+}
+
+.container {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%;
+    height: 100vh; 
+    padding: 0 20px; 
+    box-sizing: border-box; 
+    position: relative;
+}
+
+.text-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 10px; 
+    width: 40%; 
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 10px; 
+}
+
+.text-large {
+    font-size: 36px; 
+    font-weight: bold;
+    opacity: 0; 
+    animation: fadeIn 3s forwards; 
+}
+
+.text-medium {
+    font-size: 24px; 
+    color: red;
+    font-weight: bold;
+    opacity: 0; 
+    animation: fadeIn 3s 1s forwards; 
+}
+
+.text-small {
+    font-size: 18px; 
+    color: #555; 
+    opacity: 0; 
+    animation: fadeIn 3s 2s forwards; 
+    transition: color 0.3s; 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.text-small:hover {
+    color: white; 
+}
+
+.image-container {
+    width: 50%; 
+    display: flex;
+    justify-content: center; 
+    position: absolute;
+    right: 20px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+}
+
+.image-container img {
+    width: 100%;
+    height: auto; 
+    transition: filter 0.3s;
+    filter: brightness(100%); 
+}
+
+.image-container:hover img {
+    filter: brightness(50%);
+}
+
+.text-wrapper {
+    position: absolute;
+    top: 10px; 
+    left: 0;
+    width: 100%;
+    overflow: hidden; 
+}
+
+.text-animation {
+    font-size: 24px;
+    white-space: nowrap;
+    color: white; 
+    display: inline-block;
+    overflow: hidden; 
+    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+.navbar {
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    z-index: 20; 
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin-left: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white; 
+    font-size: 18px;
+    transition: color 0.3s; 
+}
+
+.navbar a:hover {
+    color: red; 
+}
+
+.contact-me {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid red; 
+    border-radius: 5px; 
+    background-color: transparent; 
+    color: red; 
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer; 
+    overflow: hidden; 
+    text-align: center;
+    transition: color 0.3s; 
+}
+
+.contact-me::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: red; 
+    transition: left 0.3s; 
+    z-index: 0; 
+}
+
+.contact-me span {
+    position: relative;
+    z-index: 1; 
+}
+
+.contact-me:hover::before {
+    left: 0; 
+}
+
+.social-icons {
+    display: flex; 
+    gap: 15px; 
+    justify-content: center; 
+    margin-top: 40px;
+}
+
+.social-icon {
+    width: 50px; 
+    height: 50px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; 
+    border: 2px solid red; 
+    background: transparent; 
+    transition: background 0.3s, border-color 0.3s; 
+}
+
+.social-icon:hover {
+    background: red; 
+    border-color: red; 
+}
+
+.social-icon img {
+    width: 24px; 
+    height: 24px; 
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        height: auto; 
+    }
+
+    .text-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .text-content {
+        gap: 5px;
+    }
+
+    .text-large {
+        font-size: 28px;
+    }
+
+    .text-medium {
+        font-size: 20px;
+    }
+
+    .text-small {
+        font-size: 16px;
+    }
+
+    .image-container {
+        width: 80%;
+        position: relative;
+        margin-top: 20px;
+        transform: none;
+    }
+
+    .text-wrapper {
+        top: 20px;
+        left: 0;
+        text-align: center;
+    }
+
+    .navbar {
+        top: auto;
+        bottom: 10px;
+        right: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+
+    .social-icons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contact-me {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-large {
+        font-size: 24px;
+    }
+
+    .text-medium {
+        font-size: 18px;
+    }
+
+    .text-small {
+        font-size: 14px;
+    }
+
+    .contact-me {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .social-icon img {
+        width: 20px;
+        height: 20px;
+    }
+}
+@media (min-width: 1024px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .text-left {
+        width: 40%;
+    }
+
+    .image-container {
+        width: 50%;
+    }
+}
+@media (min-width: 1024px) {
+    .mobile-hidden {
+        display: none;
+    }
+}
+
+
+
+</style>
